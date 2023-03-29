@@ -1,0 +1,55 @@
+.buy {
+  color: #545d6a;
+  background-color: #feffff;
+  border-radius: 12px;
+  position: relative;
+  /* overflow: hidden !important; */
+}
+.buyListTotal {
+  padding: 1rem;
+}
+.taskHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.buyList {
+  margin-top: 2rem;
+  display: grid;
+  row-gap: 1rem;
+
+  grid-template-columns: repeat(3, 1fr);
+  height: 200px;
+  overflow: auto;
+}
+
+.taskHead button {
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.1s ease-in;
+  position: relative;
+}
+.taskHead button:hover {
+  color: #000000;
+}
+.taskHead button:active {
+  background-color: #04c58257;
+}
+@media (max-width: 1220px) {
+  .buyList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.charbar {
+  width: 100%;
+  position: absolute;
+  bottom: -2%;
+  right: 0;
+  z-index: 1000;
+}

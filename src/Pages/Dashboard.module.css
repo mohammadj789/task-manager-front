@@ -1,0 +1,10 @@
+.selectedPage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  grid-template-rows: 1fr 3fr 3fr;
+}
+div.selectedPage > div {
+  height: 248px;
+  overflow-y: hidden;
+}

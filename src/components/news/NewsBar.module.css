@@ -1,0 +1,21 @@
+.notification {
+  color: #545d6a;
+  background-color: #feffff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.taskHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.notifs {
+  margin-top: 2rem;
+  height: 200px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}

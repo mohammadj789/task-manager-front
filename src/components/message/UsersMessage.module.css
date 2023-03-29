@@ -1,0 +1,41 @@
+.massageInfo {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 4fr;
+  gap: 2rem;
+  background-color: #04c58213;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 300;
+  text-align: left;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 28%;
+  margin-bottom: 0.4rem;
+  /* padding-right: 1.5rem; */
+}
+.massageInfo:hover {
+  background-color: #04c58249;
+  cursor: pointer;
+}
+.messImg {
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 50%;
+  border: 3px solid #04c5822f;
+}
+.newMessage {
+  color: #04c582;
+  justify-self: end;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  margin-left: 2rem;
+  transform: translateY(-1.5rem);
+  box-shadow: 0 3.2rem 5rem #04d38b;
+  /* background: linear-gradient(145deg, #ff6c62, #e35b53); */
+  background: linear-gradient(145deg, #04d38b, #04b175);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

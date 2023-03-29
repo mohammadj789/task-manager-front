@@ -1,0 +1,13 @@
+.bought {
+  border-bottom: 4px solid #04c582;
+  /* color: #ff0e0e; */
+  color: #04c582;
+}
+.name {
+  padding: 2rem;
+  text-transform: uppercase;
+  justify-self: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #545d6a;
+}

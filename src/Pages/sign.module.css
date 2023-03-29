@@ -1,0 +1,127 @@
+.form {
+  width: 40rem;
+
+  padding: 4.8rem;
+  border-radius: 40px;
+  background-color: #2e3137;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.4);
+}
+.selector {
+  display: flex;
+  justify-content: center;
+}
+.selectorBtn {
+  color: #545d6a;
+  font-size: 2rem;
+  background-color: transparent;
+}
+.selectorDiv {
+  text-align: center;
+  border-bottom: 4px #545d6a solid;
+  width: 50%;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+.selected {
+  border-bottom: 4px #feffff solid;
+}
+.selectedBtn {
+  color: #feffff;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.title {
+  text-transform: uppercase;
+  color: #545d6a;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+.auth {
+  background-color: #545d6a;
+  width: 100%;
+  height: 4rem;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 0.3rem;
+  outline: none;
+  padding: 0 1rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.submition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn {
+  border-radius: 7px;
+  padding: 1.2rem 6.4rem;
+  color: #feffff;
+  background-color: #04c582;
+  font-weight: bold;
+  font-size: 1.6rem;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+  margin-bottom: 0.5rem;
+}
+.submitBtn:hover {
+  background-color: #04b678;
+}
+.submitBtn.disable {
+  background-color: #545d6a;
+  cursor: not-allowed;
+}
+.forgetBtn {
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #545d6a;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border-bottom: 2px #545d6a solid;
+  padding-bottom: 0.8rem;
+}
+.invalid {
+  border: 1px solid #b40e0e;
+  background-color: #c4afaf;
+  color: #545d6a;
+}
+.errorText {
+  color: #b40e0e;
+}
+.wholeinput {
+  margin-bottom: 3rem;
+}
+@keyframes loadingSpinner {
+  from {
+    transform-origin: calc();
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.spiner {
+  color: #feffff;
+  text-align: center;
+  width: 1.6rem;
+  animation: loadingSpinner 1s ease-in-out infinite;
+}

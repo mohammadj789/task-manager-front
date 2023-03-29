@@ -1,0 +1,40 @@
+.header {
+  border-radius: 8px;
+  grid-column: 1/-1;
+  background-color: #feffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.6rem;
+}
+.profSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profilePic {
+  padding: 1.2rem;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.li:link,
+.li:visited {
+  display: inline-block;
+  text-decoration: none;
+}
+.bell:link,
+.bell:visited {
+  color: #545d6a;
+  font-size: 2rem;
+}
+.input {
+  width: 60%;
+  border: none;
+  background-color: #545d6a27;
+  border-radius: 10px;
+  padding: 1rem 1.8rem;
+  outline: none;
+}

@@ -1,0 +1,33 @@
+.nav {
+  background-color: #feffff;
+  border-radius: 12px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+.listItem {
+  text-transform: uppercase;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.4rem;
+  width: 100%;
+  padding-right: 2rem;
+  color: #545d6a;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+.logo {
+  width: 5rem;
+  margin: 1rem 0;
+}
+.selected {
+  border-right: 5px solid #04c582;
+  background-color: #04c58228;
+  color: #04c582;
+  border-radius: 1px;
+}

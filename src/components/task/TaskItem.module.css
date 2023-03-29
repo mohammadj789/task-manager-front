@@ -1,0 +1,38 @@
+.taskListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #545d6a2e;
+}
+.taskTitle {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+}
+.taskTitle span {
+  font-size: 1.1rem;
+  color: #545d6a69;
+}
+.doneLogo {
+  color: #04c582;
+}
+
+.taskListItem button {
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.1s ease-in;
+}
+.taskListItem button:hover {
+  color: #01774e;
+}
+.taskListItem button:active {
+  background-color: #04c582;
+}
+.doneButton {
+  color: #04c582;
+}

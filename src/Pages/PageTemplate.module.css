@@ -1,0 +1,17 @@
+.mainPage {
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.4);
+  padding: 3.6rem;
+
+  background-color: #545d6a;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  border-radius: 40px;
+  overflow: hidden;
+  width: 94.5vw;
+  /* height: 80vh; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
