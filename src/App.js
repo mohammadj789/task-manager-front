@@ -4,7 +4,7 @@ import Sign from "./Pages/Sign";
 
 import NotFoundPage from "./Pages/NotFoundPage";
 import Dashboard from "./Pages/Dashboard";
-import Tasks from "./Pages/Tasks";
+import TasksPage from "./Pages/TasksPage";
 
 function App() {
   return (
@@ -12,10 +12,10 @@ function App() {
       <Route path="/" element={<Navigate to={"/auth"} />} />
       <Route path="/auth" element={<Sign />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/tasks" element={<Tasks />} />
-      <Route path="/buylist" element={<Dashboard />} />
-      <Route path="/calender" element={<Dashboard />} />
-      <Route path="/messages" element={<Dashboard />} />
+      <Route path="/tasks" element={<TasksPage />} />
+      <Route path="/buylist" />
+      <Route path="/calender" />
+      <Route path="/friends" />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

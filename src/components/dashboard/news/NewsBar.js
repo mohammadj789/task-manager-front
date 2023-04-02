@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import classes from "./NewsBar.module.css";
 import NewsItem from "./NewsItem";
 
-const NewsBar = (props) => {
+const NewsBar = () => {
+  const news = useSelector((state) => state.user.news);
   return (
     <div className={classes.notification}>
       <div className={classes.taskHead}>
@@ -10,7 +12,7 @@ const NewsBar = (props) => {
         <ion-icon name="notifications-outline"></ion-icon>
       </div>
       <div className={classes.notifs}>
-        {props.news.map((item) => (
+        {news.map((item) => (
           <NewsItem
             title={item.title}
             message={item.content}

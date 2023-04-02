@@ -14,7 +14,8 @@ body {
   font-family: "Ubuntu", cursive;
   line-height: 1;
   font-weight: 400;
-  color: #feffff;
+  /* color: #feffff; */
+  color: #545d6a;
   background-color: #04c582;
 
   transition: all 0.3s;

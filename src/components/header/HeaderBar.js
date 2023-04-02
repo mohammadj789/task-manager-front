@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import classes from "./HeaderBar.module.css";
 
-const HeaderBar = (props) => {
+const HeaderBar = () => {
+  const userPic = useSelector((state) => state.user.profilePic);
   return (
     <header className={classes.header}>
       <input
@@ -16,7 +18,7 @@ const HeaderBar = (props) => {
         </Link>
         <img
           className={classes.profilePic}
-          src={props.userPic}
+          src={userPic}
           alt="profile pic"
         />
       </div>

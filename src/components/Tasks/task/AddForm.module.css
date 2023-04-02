@@ -1,0 +1,41 @@
+.visable {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.form form {
+  gap: 1.6rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.formpart {
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  color: red;
+  text-align: center;
+}
+.inputLable {
+  color: #818488;
+  margin-bottom: 0.5rem;
+  /* font-weight: 600; */
+  font-size: 1.1rem;
+}
+.inputtitle {
+  border: 1px #c9c8c8 solid;
+  height: 3rem;
+  border-radius: 3px;
+}
+.inputtitle:focus {
+  outline-color: #04c582;
+  outline-style: solid;
+  outline-width: 2px;
+  border: 1px #c9c8c8 solid;
+}
+.with {
+  display: flex;
+  justify-content: space-between;
+}
+.friends {
+}

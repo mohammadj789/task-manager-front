@@ -53,7 +53,7 @@ const MainNavigation = () => {
             <span>calender</span>
           </NavLink>
           <NavLink
-            to={"/messages"}
+            to={"/friends"}
             className={(navdata) =>
               navdata.isActive
                 ? `${classes.listItem} ${classes.selected}`
@@ -61,7 +61,7 @@ const MainNavigation = () => {
             }
           >
             <ion-icon name="chatbox-outline"></ion-icon>
-            <span>Messages</span>
+            <span>Friends</span>
           </NavLink>
 
           <NavLink

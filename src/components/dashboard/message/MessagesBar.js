@@ -1,21 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { userAction } from "../../../store/UserSlice";
 import classes from "./MessagesBar.module.css";
 
 import UsersMessage from "./UsersMessage";
 
 const MessagesBar = (props) => {
-  const [userFriend, setUserFriend] = useState(props.user.friends);
+  const dispatch = useDispatch();
+  const userFriend = useSelector((state) => state.user.friends);
+
   const connectFriends = userFriend.filter(
     (friend) => friend.massages
   );
 
   const setReadHandler = (id) => {
-    setUserFriend((prev) => {
-      const item = prev.find((item) => item.id === id);
-      item.newMessage = false;
-
-      return [...prev];
-    });
+    dispatch(userAction.setMessageToRead(id));
   };
 
   return (

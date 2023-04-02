@@ -7,16 +7,14 @@ import { useState } from "react";
 
 import classes from "./CalenderBar.module.css";
 import DayTasks from "./DayTasks";
+import { useSelector } from "react-redux";
 
-function CalenderBar(props) {
+function CalenderBar() {
   const [value, setValue] = useState(dayjs());
-  // console.log(
-  //   value.$d.getFullYear(),
-  //   value.$d.getMonth(),
-  //   value.$d.getDate()
-  // );
 
-  const selectedDayTasks = props.tasks.filter(
+  const taskData = useSelector((state) => state.task.tasks);
+
+  const selectedDayTasks = taskData.filter(
     (task) =>
       task.year === value.$d.getFullYear() &&
       task.month === value.$d.getMonth() &&

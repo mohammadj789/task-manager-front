@@ -3,7 +3,11 @@ import classes from "./TaskItem.module.css";
 const TaskItem = (props) => {
   const number = (props.index + "").padStart(2, "0");
   return (
-    <li className={classes.taskListItem}>
+    <li
+      className={`${classes.taskListItem} ${
+        props.done && classes.donetask
+      }`}
+    >
       <div className={classes.taskTitle}>
         <span>{number}</span>
         <p>{props.title}</p>

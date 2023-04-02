@@ -1,0 +1,71 @@
+.task {
+  width: 100%;
+  color: aliceblue;
+  border-radius: 16px;
+  background-color: #04c582;
+
+  /* background: rgba(246, 239, 239, 0.31); */
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 1rem;
+  overflow: hidden;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.taskheader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.status {
+  width: 25%;
+  height: 120%;
+  background-color: #04c582;
+  border-radius: 3px;
+  color: aliceblue;
+  background: linear-gradient(var(--background), #4d504e5e);
+  /* background-color: var(--background); */
+
+  box-shadow: 0 1px 60px rgba(10, 10, 10, 0.548);
+  font-weight: 400;
+  border-radius: 11px;
+  cursor: pointer;
+}
+.status:disabled {
+  cursor: default;
+  background: linear-gradient(var(--background), #4d504e);
+}
+
+.statuslogo {
+  width: 3rem;
+  font-size: 2rem;
+}
+
+.taskdetail {
+  width: 100%;
+  font-size: 3rem;
+}
+
+.taskdate {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.taskdate img {
+  /* padding: 1.2rem; */
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}

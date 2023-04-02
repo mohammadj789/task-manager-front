@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { buyAction } from "../../../store/BuySlice";
 import ChartBar from "../progress/ChartBar";
 
 import BuyButton from "./BuyButton";
 import classes from "./BuyList.module.css";
 
 const BuyListBar = (props) => {
-  const [bought, setBought] = useState(props.buyList);
-  const setDoneHandler = (id) => {
-    setBought((prev) => {
-      const item = prev.find((item) => item.id === id);
-      item.bought = !item.bought;
+  const dispatch = useDispatch();
+  const buyList = useSelector((state) => state.buy.list);
 
-      return [...prev];
-    });
+  const setDoneHandler = (id) => {
+    dispatch(buyAction.setToBuy(id));
   };
 
   return (
@@ -20,8 +19,10 @@ const BuyListBar = (props) => {
       <div className={classes.charbar}>
         <ChartBar
           border={false}
-          value={bought.filter((item) => item.bought === true).length}
-          maxValue={bought.length}
+          value={
+            buyList.filter((item) => item.bought === true).length
+          }
+          maxValue={buyList.length}
         />
       </div>
       <div className={classes.buyListTotal}>
@@ -32,7 +33,7 @@ const BuyListBar = (props) => {
           </button>
         </div>
         <div className={classes.buyList}>
-          {props.buyList.map((item) => (
+          {buyList.map((item) => (
             <BuyButton
               item={item}
               key={item.id}

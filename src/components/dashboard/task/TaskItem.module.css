@@ -36,3 +36,6 @@
 .doneButton {
   color: #04c582;
 }
+.taskListItem.donetask {
+  color: #04c582;
+}
