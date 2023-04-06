@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Input from "../components/UI/Input";
 import { verifyForm } from "../helper/input";
 import useHttp from "../hooks/useHttp";
+import { userAction } from "../store/UserSlice";
 import classes from "./sign.module.css";
 
 const Sign = (props) => {
@@ -58,11 +60,12 @@ const Sign = (props) => {
     }
     setSignin(true);
   };
-
+  const dispatch = useDispatch();
   const { isLoading, error, sendRequest } = useHttp();
   const getData = (data) => {
     console.log(data);
     navigate("/dashboard");
+    dispatch(userAction.login(data.token));
   };
 
   const submitHandler = (e) => {

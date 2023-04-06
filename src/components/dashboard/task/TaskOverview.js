@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { DayIsPast, daysBetween } from "../../../helper/date";
 import { taskAction } from "../../../store/TaskSlice";
+import { uiAction } from "../../../store/UiSclice";
 import TaskItem from "./TaskItem";
 import classes from "./TaskOverview.module.css";
 
@@ -21,8 +22,10 @@ const TaskOverview = () => {
 
     return !DayIsPast(toDate) && daysBetween(toDate, new Date()) <= 7;
   });
+
   const addHandler = () => {
-    navigate("/tasks", { state: { add: true } });
+    navigate("/tasks");
+    dispatch(uiAction.AddFormTrue());
   };
 
   return (

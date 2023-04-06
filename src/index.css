@@ -18,9 +18,10 @@ body {
   color: #545d6a;
   background-color: #04c582;
 
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }

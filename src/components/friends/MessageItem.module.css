@@ -1,0 +1,18 @@
+.item {
+  padding: 1rem 2rem;
+
+  min-height: 10%;
+  max-width: 50%;
+  border-radius: 8px 8px 8px 0;
+  background-color: rgba(0, 0, 255, 0.185);
+  background-color: rgba(0, 0, 255, 0.185);
+  align-self: flex-start;
+
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+.item p {
+  width: 100%;
+  word-wrap: break-word;
+}

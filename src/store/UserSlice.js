@@ -8,6 +8,7 @@ export const userSlice = createSlice({
     profilePic: dummyuser.profilePic,
     friends: dummyuser.friends,
     news: dummyuser.news,
+    token: null,
   },
   reducers: {
     setMessageToRead(state, action) {
@@ -15,10 +16,24 @@ export const userSlice = createSlice({
       const friend = state.friends.find((item) => item.id === id);
       friend.newMessage = false;
     },
+    login(state, action) {
+      const token = action.payload;
+      state.token = token;
+    },
+    logout(state) {
+      state.token = null;
+    },
+    sendMessage(state, action) {
+      const id = action.payload.id;
+      const message = action.payload.message;
+      console.log(id, message);
 
-    getFriendsByID(state, action) {},
-    getFriendsAhead(state) {},
-    friendMessages(state) {},
+      const friend = state.friends.find((friend) => friend.id === id);
+
+      friend.massages
+        ? friend.massages.push({ content: message, user: true })
+        : (friend.massages = [{ content: message, user: true }]);
+    },
   },
 });
 export const userAction = userSlice.actions;

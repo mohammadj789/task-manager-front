@@ -30,17 +30,7 @@ const MainNavigation = () => {
             <ion-icon name="briefcase-outline"></ion-icon>
             <span>Tasks</span>
           </NavLink>
-          <NavLink
-            to={"/buylist"}
-            className={(navdata) =>
-              navdata.isActive
-                ? `${classes.listItem} ${classes.selected}`
-                : classes.listItem
-            }
-          >
-            <ion-icon name="list-outline"></ion-icon>
-            <span>Buy List</span>
-          </NavLink>
+
           <NavLink
             to={"/calender"}
             className={(navdata) =>

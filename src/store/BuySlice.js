@@ -11,6 +11,14 @@ export const buySlice = createSlice({
       const item = state.list.find((item) => item.id === id);
       item.bought = !item.bought;
     },
+    addItem(state, action) {
+      const item = action.payload;
+      state.list.push({
+        id: item.id,
+        name: item.name,
+        bought: false,
+      });
+    },
   },
 });
 export const buyAction = buySlice.actions;

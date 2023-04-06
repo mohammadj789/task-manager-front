@@ -1,27 +1,30 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import AddForm from "../components/Tasks/task/AddForm";
-import FilterBar from "../components/Tasks/task/FilterBar";
-import Task from "../components/Tasks/task/Task";
+import { useDispatch, useSelector } from "react-redux";
+import { Transition } from "react-transition-group";
+
+import AddForm from "../components/Tasks/AddForm";
+import FilterBar from "../components/Tasks/FilterBar";
+import Task from "../components/Tasks/Task";
 
 import MuiTheme from "../helper/MuiTheme";
+import { sortTasks } from "../helper/sort";
+import { uiAction } from "../store/UiSclice";
 import PageTemplate from "./PageTemplate";
 import classes from "./TasksPage.module.css";
 
 const TasksPage = () => {
+  const dispatch = useDispatch();
   const taskData = useSelector((state) => state.task.tasks);
-  const { state } = useLocation();
-
+  const isAdding = useSelector((state) => state.ui.addForm);
+  const sortedTasks = sortTasks([...taskData]);
   const [filter, setFilter] = useState("all");
-  const [isAdding, setIsAdding] = useState(state?.add || false);
 
   const filterTasks = (category) => {
     setFilter(category);
   };
 
   const addHandler = () => {
-    setIsAdding((prev) => !prev);
+    dispatch(uiAction.toggleAddForm());
   };
 
   return (
@@ -39,7 +42,7 @@ const TasksPage = () => {
             </button>
           </div>
           <div className={classes.tasks}>
-            {taskData
+            {sortedTasks
               .filter((task) => {
                 if (filter === "all") {
                   return task;
@@ -52,15 +55,26 @@ const TasksPage = () => {
               ))}
           </div>
         </div>
-
-        <div
-          style={isAdding ? { width: "35%" } : { width: "0" }}
-          className={classes.addtask}
+        <Transition
+          mountOnEnter
+          unmountOnExit
+          in={isAdding}
+          timeout={500}
         >
-          <MuiTheme>
-            <AddForm visable={isAdding} />
-          </MuiTheme>
-        </div>
+          {(state) => (
+            <div
+              className={`${classes.addtask} 
+            ${
+              (state === "entered" || state === "entering") &&
+              classes.thirtyfivewidth
+            }`}
+            >
+              <MuiTheme>
+                <AddForm visable={isAdding} />
+              </MuiTheme>
+            </div>
+          )}
+        </Transition>
       </div>
     </PageTemplate>
   );

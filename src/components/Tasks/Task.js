@@ -1,10 +1,11 @@
 import React from "react";
 import classes from "./Task.module.css";
 
-import FriendAhead from "../../dashboard/progress/FriendAhead";
-import { dateReformat, DayIsPast } from "../../../helper/date";
+import FriendAhead from "../dashboard/progress/FriendAhead";
+import { dateReformat, DayIsPast } from "../../helper/date";
 import { useDispatch, useSelector } from "react-redux";
-import { taskAction } from "../../../store/TaskSlice";
+import { taskAction } from "../../store/TaskSlice";
+import useTranslateId from "../../hooks/useTranslateId";
 
 const Task = (props) => {
   const dispatch = useDispatch();
@@ -16,9 +17,7 @@ const Task = (props) => {
 
   const task = props.task;
 
-  const friendsWiths = task.with.map((withUser) =>
-    user.friends.find((friend) => friend.id === withUser)
-  );
+  const friendsWiths = useTranslateId(task.with);
 
   const backgroundcolor = taskCategories.find(
     (cat) => cat.title === task.category

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -14,16 +14,20 @@ import {
 } from "@mui/material";
 
 import classes from "./AddForm.module.css";
-import Input from "../../UI/Input";
-import { taskAction } from "../../../store/TaskSlice";
-import { generateUniqueId } from "../../../helper/generateId";
+import Input from "../UI/Input";
+import { taskAction } from "../../store/TaskSlice";
+import { generateUniqueId } from "../../helper/generateId";
 
 import FreindSelectList from "./FreindSelectList";
-let friends;
+import { uiAction } from "../../store/UiSclice";
+import { userAction } from "../../store/UserSlice";
+let friends = [];
 const AddForm = (props) => {
   const taskCategories = useSelector(
     (state) => state.task.categories
   );
+  const user = useSelector((state) => state.user.name);
+
   const dispatch = useDispatch();
   const titleInputRef = useRef();
 
@@ -31,6 +35,20 @@ const AddForm = (props) => {
   const [date, setDate] = useState(null);
   const [error, setError] = useState(null);
   const [friendsWiths, setFriendsWiths] = useState(false);
+
+  useEffect(() => {
+    if (!props.visable) {
+      resetForm();
+    }
+  }, [props.visable]);
+
+  const resetForm = () => {
+    setError(null);
+    titleInputRef.current.value = "";
+    setCategory("");
+    setDate(null);
+    setFriendsWiths(false);
+  };
 
   const handleChange = (event) => {
     setCategory(event.target.value);
@@ -64,11 +82,18 @@ const AddForm = (props) => {
         with: friends,
       })
     );
-    setError(null);
-    titleInputRef.current.value = "";
-    setCategory("");
-    setDate(null);
-    setFriendsWiths(false);
+    dispatch(uiAction.AddFormFalse());
+    friends.map((friend) =>
+      dispatch(
+        userAction.sendMessage({
+          id: friend,
+          message: `${user} has planned ${
+            titleInputRef.current.value
+          }with you on ${date.$d.getFullYear()}.${date.$d.getMonth()}.${date.$d.getDate()}`,
+        })
+      )
+    );
+    resetForm();
   };
 
   const checkHandler = (list) => {
