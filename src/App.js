@@ -8,6 +8,7 @@ const Dashboard = lazy(() => import("./Pages/Dashboard"));
 const TasksPage = lazy(() => import("./Pages/TasksPage"));
 const CalenderPage = lazy(() => import("./Pages/CalenderPage"));
 const FriendsPage = lazy(() => import("./Pages/FriendsPage"));
+const SettingPage = lazy(() => import("./Pages/SettingPage"));
 
 function App() {
   return (
@@ -57,7 +58,9 @@ function App() {
       <Route
         path="setting"
         element={
-          <Suspense fallback={<div>Loading...</div>}></Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <SettingPage></SettingPage>
+          </Suspense>
         }
       />
       <Route

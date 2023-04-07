@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+}
+.pic {
+  /* display: inline-block; */
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.pic img {
+  width: 100%;
+}
+.pic input {
+  display: none;
+}
+.main button {
+  width: 50%;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #04c582;
+  color: white;
+  margin-top: 0.5rem;
+}
+.main input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px #545d6a83 solid;
+}
+.username {
+  width: 70%;
+}
+.email {
+  width: 70%;
+}
+.name {
+  width: 70%;
+}
+.age {
+  width: 70%;
+}
+.friend {
+  width: 70%;
+}
+
+.save {
+  padding: 1rem 2rem;
+  width: 20% !important;
+}
+.save:disabled {
+  background-color: #545d6a83;
+  color: white;
+  padding: 1rem 2rem;
+  width: 20% !important;
+  cursor: not-allowed;
+}

@@ -35,9 +35,9 @@ const ChatSection = ({ id }) => {
         </button>
       </div>
       <div className={classes.messages}>
-        {friend.massages.map((mes) => (
+        {friend.massages?.map((mes) => (
           <MessageItem key={mes.id} message={mes} />
-        ))}
+        )) || ""}
       </div>
       <div className={classes.input}>
         <input ref={messageInputRef} />

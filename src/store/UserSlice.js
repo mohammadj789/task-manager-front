@@ -6,6 +6,9 @@ export const userSlice = createSlice({
     id: dummyuser.id,
     name: dummyuser.name,
     profilePic: dummyuser.profilePic,
+    username: dummyuser.username,
+    email: dummyuser.email,
+    age: dummyuser.age,
     friends: dummyuser.friends,
     news: dummyuser.news,
     token: null,
@@ -33,6 +36,22 @@ export const userSlice = createSlice({
       friend.massages
         ? friend.massages.push({ content: message, user: true })
         : (friend.massages = [{ content: message, user: true }]);
+    },
+    changeName(state, action) {
+      const name = action.payload;
+      state.name = name;
+    },
+    changeUsername(state, action) {
+      const username = action.payload;
+      state.username = username;
+    },
+    changeAge(state, action) {
+      const age = action.payload;
+      state.age = age;
+    },
+    changeEmail(state, action) {
+      const email = action.payload;
+      state.email = email;
     },
   },
 });

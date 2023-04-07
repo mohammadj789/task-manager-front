@@ -1,7 +1,17 @@
 import React from "react";
 
 const NotFoundPage = () => {
-  return <div style={{ fontSize: "90px" }}>Not Found 404</div>;
+  return (
+    <div
+      style={{
+        textAlign: "center",
+        fontSize: "90px",
+        color: "#fff",
+      }}
+    >
+      Not Found
+    </div>
+  );
 };
 
 export default NotFoundPage;

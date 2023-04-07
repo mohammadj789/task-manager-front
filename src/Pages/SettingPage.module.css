@@ -1,0 +1,47 @@
+.setting {
+  width: 100%;
+  height: 620px;
+  background-color: aliceblue;
+  border-radius: 12px;
+  display: flex;
+  padding: 1rem;
+  overflow: hidden;
+}
+.titles {
+  width: 35%;
+  height: 100%;
+  border-right: 3px #545d6a solid;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #545d6a1f solid;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+.header p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.header ion-icon {
+  font-size: 2rem;
+}
+.detail {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+}

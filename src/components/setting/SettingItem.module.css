@@ -1,0 +1,31 @@
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  height: 8%;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-content: center;
+  font-family: inherit;
+  font-weight: lighter;
+  font-weight: inherit;
+}
+.container p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  justify-self: start;
+}
+.container ion-icon {
+  font-size: 2rem;
+}
+.arrow {
+  justify-self: end;
+}
+.logo {
+  justify-self: left;
+}
+.selected {
+  background-color: rgba(71, 71, 71, 0.151);
+}

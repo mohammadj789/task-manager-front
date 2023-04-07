@@ -1,0 +1,54 @@
+.Modal {
+  position: absolute;
+  z-index: 200;
+  color: #545d6a;
+  /* box-shadow: 0 2px 2px #ccc; */
+  background-color: white;
+  border-radius: 5px;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 12%;
+  transition: all 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.save {
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: #04c582;
+  color: white;
+
+  font-size: 1.7rem;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+}
+.categoryName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.categoryName input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px #545d6a83 solid;
+  height: 2rem;
+}
+.colorinput {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.close {
+  background-color: #545d6a;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close ion-icon {
+  font-size: 2rem;
+}

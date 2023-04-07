@@ -1,0 +1,11 @@
+.main {
+  position: absolute;
+  z-index: 100;
+  top: -1rem;
+  left: -1rem;
+  width: 110%;
+  height: 110%;
+  /* border-radius: 8px; */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 2px 2px 0 0;
+}

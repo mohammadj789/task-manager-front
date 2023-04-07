@@ -8,12 +8,12 @@ import image6 from "../img/customers/customer-6.jpg";
 
 export const dummytasks = {
   categories: [
-    { title: "sport", color: "rgb(165, 23, 58)" },
-    { title: "health", color: "rgb(52, 255, 2)" },
-    { title: "work", color: "rgb(112, 116, 111)" },
-    { title: "daily", color: "rgb(101, 138, 238)" },
-    { title: "meet", color: "rgb(235, 121, 216)" },
-    { title: "payment", color: "rgb(7, 139, 89)" },
+    { title: "sport", color: "#a5173a", id: 900 },
+    { title: "health", color: "#34ff02", id: 901 },
+    { title: "work", color: "#70746f", id: 902 },
+    { title: "daily", color: "#658aee", id: 903 },
+    { title: "meet", color: "#eb79d8", id: 904 },
+    { title: "payment", color: "#078b59", id: 905 },
   ],
   tasks: [
     {
@@ -108,8 +108,11 @@ export const dummybuylist = [
 ];
 export const dummyuser = {
   id: 0,
+  username: "mohammadj789",
+  email: "mohammadsoltanian10@gmail.com",
   name: "Mohammadjavad Soltanian",
   profilePic: profilePic,
+  age: 21,
   friends: [
     {
       name: "Lizzie",

@@ -19,7 +19,8 @@ const FriendItem = (props) => {
       />
       <span className={classes.name}>{props.name}</span>
       <span className={classes.message}>
-        {props.lastmessage.at(-1).content}
+        {props.lastmessage.length !== 0 &&
+          props.lastmessage.at(-1).content}
       </span>
       {props.newmessage && <div className={classes.newMessage}></div>}
     </button>

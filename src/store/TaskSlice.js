@@ -8,11 +8,19 @@ export const taskSlice = createSlice({
     tasks: dummytasks.tasks,
   },
   reducers: {
+    updateCategory(state, action) {
+      const index = action.payload.index;
+      const color = action.payload.color;
+      state.categories[index].color = color;
+    },
     addCategory(state, action) {
       const newCategory = action.payload;
-      state.categories = state.categories.push({
+      console.log(newCategory);
+
+      state.categories.push({
         title: newCategory.title,
         color: newCategory.color,
+        id: newCategory.id,
       });
     },
     addTask(state, action) {
